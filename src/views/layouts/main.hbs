@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products with bcrypt</title>
+
+    {{!-- Custom Bootstrap --}}
+    <link href="/css\bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    {{!-- Font Awesome --}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    
+    {{!-- Custom CSS --}}
+    <link rel="stylesheet" href="/css/styles.css">
+
+    {{!-- Scripts --}}
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+    {{>navigation}}
+    <div class="container">
+        {{>messages}}
+    </div>
+    {{>errors}}
+    {{{body}}}
+    {{>footer}}
+
+
+</body>
+
+</html>

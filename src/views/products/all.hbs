@@ -1,0 +1,38 @@
+<div class="p-5">
+
+    <a href="/products/new" class="btn btn-primary">Nuevo registro</a>
+
+    <div class="table-responsive-sm pt-2">
+        <table class="table table-striped">
+
+            <thead>
+
+                <tr>
+                    <th class="th-sm">Product Name</th>
+                    <th class="th-sm">Category</th>
+                    <th class="th-sm">Price</th>
+                    <th class="th-sm">Description</th>
+                    <th class="th-sm">Edit</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#products}}
+                <tr>
+                    <td>{{ProductName}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Price}}</td>
+                    <td>{{Description}}</td>
+                    <td>
+
+                        <form action="/products/edit/{{_id}}" method="GET">
+                            <button class="btn btn-primary" type="submit">Edit</button>
+                        </form>
+
+                    </td>
+                </tr>
+                {{/products}}
+            </tbody>
+        </table>
+    </div>
+</div>

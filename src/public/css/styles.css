@@ -1,0 +1,79 @@
+html {
+  height: 100%;
+}
+
+body {
+  /* default is 1rem or 16px */
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  min-height: 100%;
+}
+
+.logos {
+  width: 30%;
+}
+
+.logos2 {
+  width: 20%;
+}
+
+/* Increase all font sizes on mobile */
+@media (max-width: 767px) {
+  body {
+    /* default is 1rem or 16px */
+    font-size: 25px;
+  }
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+.espacio {
+  box-sizing: content-box;
+  height: 0;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+.fa {
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.icons img {
+  width: 35%;
+}
+
+.icons img:hover {
+  opacity: 0.7;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+  font-size: 20px;
+}

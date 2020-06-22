@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">Evaluacion Final</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/"> Home </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/aboutme">About me</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            {{#if user}}
+
+            <li>
+                {{!-- Dropdown button  --}}
+                <div class="dropdown show">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Products
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/products/all">All products</a>
+                        <a class="dropdown-item" href="/products/new">Add product</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/users/logout">Log Out</a>
+                    </div>
+
+                </div>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/users/login">Log in</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/users/signup">Sign Up</a>
+            </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>

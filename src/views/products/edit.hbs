@@ -1,0 +1,66 @@
+<div class="container px-5 formulario">
+
+    <form class="form-horizontal pt-5 pl-5" action="/products/edit/{{product._id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+
+        <fieldset>
+
+            <!-- Form Name -->
+            <div class=" pb-5">
+                <h1>Record modification for</h1>
+                <input class="form-control text-center" type="text" disabled name="id" value="{{product._id}}">
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class=" control-label" for="ProductName">PRODUCT NAME</label>
+                <div class="">
+                    <input id="ProductName" name="ProductName" placeholder="" value="{{product.ProductName}}"
+                        class="form-control input-md" autofocus required type="text">
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="form-group">
+                <label class=" control-label" for="Category">PRODUCT CATEGORY</label>
+                <div class="">
+                    <select id="Category" name="Category" class="form-control">
+                        <option selected>{{product.Category}}</option>
+                        <option value="Computers">Computers</option>
+                        <option value="Phones">Phones</option>
+                        <option value="Accesories">Accesories</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class=" control-label" for="Price">PRICE</label>
+                <div class="">
+                    <input id="Price" name="Price" placeholder="" class="form-control input-md" required
+                        value="{{product.Price}}" type="number">
+                </div>
+            </div>
+
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class=" control-label" for="Description">PRODUCT DESCRIPTION</label>
+                <div class="">
+                    <textarea class="form-control" id="Description" name="Description"
+                        required>{{product.Description}}</textarea>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-group">
+                <label class=" control-label" for="button">Save or delete product</label>
+                <div class="">
+                    <button type="submit" id="button" name="button" class="btn btn-primary">Save</button>
+                    <button formaction="/products/edit/{{product._id}}?_method=DELETE" method="POST" type="submit"
+                        class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>
